@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dremio-server:
+    hostname: dio-server
+    image: "dremio/dremio-oss:4.7"
+    container_name: dio-server
+    ports:
+      - "9047:9047"
+      - "31010:31010"
+    volumes: 
+      - "/home/gavin/dremio_data:/opt/dremio/data"
